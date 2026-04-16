@@ -45,14 +45,32 @@ Run `bastyn COMMAND --help` for details on any command.
 
 Your LLM keys and admin credentials **never leave your machine**. The activation service only sees the license token and basic client info (OS, hostname) for audit logging.
 
-## Requirements
+## Prerequisites
+
+### Infrastructure
 
 - Docker Desktop or Docker Engine + Compose plugin (v24+)
 - Python 3.10+
 - 4 CPU cores, 16 GB RAM, 50 GB disk
-- Outbound HTTPS to `api.bastyn.ai` and `europe-west1-docker.pkg.dev`
+- Outbound HTTPS to `activate.bastyn.ai` and `europe-west1-docker.pkg.dev`
 
-See the bundled `README.md` inside your install directory for the full on-prem deployment guide.
+### Have ready before running `bastyn init`
+
+| What | Where to get it | Used for |
+|------|----------------|----------|
+| **BASTYN license token** | Provided by your BASTYN account representative | Activating your deployment and provisioning registry credentials |
+| **OpenAI API key** *or* **Azure OpenAI endpoint + key** | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) or Azure AI Studio | LLM-powered analysis (two models required: `gpt-4o-mini` + `gpt-5.1`) |
+| **Admin email + password** | You choose these | First superuser account for the BASTYN UI |
+
+The following are auto-generated for you during setup (no action needed):
+
+| What | Purpose |
+|------|---------|
+| `SECRET_KEY` | JWT token signing |
+| `POSTGRES_PASSWORD` | Database password |
+| `LITELLM_MASTER_KEY` | Internal LLM proxy authentication |
+
+See the bundled `README.md` inside your install directory for the full deployment guide, including Azure OpenAI configuration and parallelization tuning.
 
 ## Support
 
