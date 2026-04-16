@@ -5,10 +5,10 @@ Command-line installer for [BASTYN](https://bastyn.ai) on-premises deployments.
 ## Install
 
 ```bash
-curl -sSL https://get.bastyn.ai/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/RootedLogicLDA/bastyn-cli/main/install.sh | bash
 ```
 
-Or via pipx:
+Or directly via pipx:
 
 ```bash
 pipx install bastyn-cli
