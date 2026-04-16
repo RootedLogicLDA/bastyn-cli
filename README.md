@@ -74,4 +74,6 @@ See the bundled `README.md` inside your install directory for the full deploymen
 
 ## Support
 
-Contact your BASTYN account representative.
+Contact your BASTYN account representative
+Bal@Rootedlogic.ai
+CLaudio@Rootedlogic.ai
